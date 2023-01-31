@@ -28,31 +28,31 @@
 
 // console.log(mult(10));
 
-function mergeSortTopDown(arr) {
-  if (arr.length <= 1) {
-    return arr;
-  }
+// function mergeSortTopDown(arr) {
+//   if (arr.length <= 1) {
+//     return arr;
+//   }
 
-  const middle = Math.floor(arr.length / 2);
-  const left = arr.slice(0, middle);
-  const right = arr.slice(middle);
+//   const middle = Math.floor(arr.length / 2);
+//   const left = arr.slice(0, middle);
+//   const right = arr.slice(middle);
 
-  return mergeSortTopDown(mergeSortTopDown(left), mergeSortTopDown(right));
-}
+//   return mergeSortTopDown(mergeSortTopDown(left), mergeSortTopDown(right));
+// }
 
-function mergeTopDown(left, right) {
-  const arr = [];
+// function mergeTopDown(left, right) {
+//   const arr = [];
 
-  while (left.length && right.length) {
-    if (left[0] < right[0]) {
-      arr.push(left.shift());
-    } else {
-      arr.push(right.shift());
-    }
-  }
-  return arr.concat(left.slice()).concat(right.slice());
-}
+//   while (left.length && right.length) {
+//     if (left[0] < right[0]) {
+//       arr.push(left.shift());
+//     } else {
+//       arr.push(right.shift());
+//     }
+//   }
+//   return arr.concat(left.slice()).concat(right.slice());
+// }
 
-testArr = [1, 8, 2, 0, 9, 10, 188, 23, 3289];
+// testArr = [1, 8, 2, 0, 9, 10, 188, 23, 3289];
 
-console.log(mergeSortTopDown(testArr));
+// console.log(mergeSortTopDown(testArr));
