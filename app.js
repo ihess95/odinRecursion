@@ -1,3 +1,15 @@
+class LinkedList{
+    constructor(value){
+        this.value = 
+
+    }
+
+}
+
+class Node{
+
+}
+
 // function fibs(n) {
 //   let x = 1;
 //   let t = 0;
