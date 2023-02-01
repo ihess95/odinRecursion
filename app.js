@@ -1,14 +1,22 @@
-class LinkedList{
-    constructor(value){
-        this.value = 
+const LinkedList = require("./LinkedList");
 
-    }
+const ll = new LinkedList();
+ll.insertAtHead(10);
+ll.insertAtHead(20);
 
-}
+console.log(ll);
 
-class Node{
+// class LinkedList{
+//     constructor(value){
+//         this.value =
 
-}
+//     }
+
+// }
+
+// class Node{
+
+// }
 
 // function fibs(n) {
 //   let x = 1;
