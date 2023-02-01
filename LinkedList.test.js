@@ -1,4 +1,3 @@
-const { describe } = require("yargs");
 const LinkedList = require("./LinkedList");
 
 describe("#insertAtHead", () => {
