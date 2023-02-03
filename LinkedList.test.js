@@ -19,28 +19,29 @@ describe("#getByIndex", () => {
     test("it returns null", () => {
       const ll = LinkedList.fromValues(10, 20);
 
-      expect(ll.getByIndex(-1)).toBeNull()
+      expect(ll.getByIndex(-1)).toBeNull();
     });
   });
   describe("with index greater than list length", () => {
     test("it returns null", () => {
       const ll = LinkedList.fromValues(10, 20);
 
-      expect(ll.getByIndex(5)).toBeNull()
+      expect(ll.getByIndex(5)).toBeNull();
     });
   });
 
-  describe('with index 0', () =>{
-    test('it returns the head', () =>{
-        const ll = LinkedList.fromValues(10,20)
+  describe("with index 0", () => {
+    test("it returns the head", () => {
+      const ll = LinkedList.fromValues(10, 20);
 
-        expect(ll.getByIndex(0).value).toBe(10)
-    })
-  describe('with index in middle', () =>{
-    test('it returns the element at index', () =>{
-        const ll = LinkedList.fromValues(10,20, 30, 40)
+      expect(ll.getByIndex(0).value).toBe(10);
+    });
+    describe("with index in middle", () => {
+      test("it returns the element at index", () => {
+        const ll = LinkedList.fromValues(10, 20, 30, 40);
 
-        expect(ll.getByIndex(2).value).toBe(30)
-    })
-  })
+        expect(ll.getByIndex(2).value).toBe(30);
+      });
+    });
+  });
 });

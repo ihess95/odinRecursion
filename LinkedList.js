@@ -11,6 +11,10 @@ class LinkedList {
     this.length++;
   }
 
+  getByIndex(index) {
+    if (index < 0 || index >= this.length) return null;
+  }
+
   //   append(data) {
   //     const newNode = new LinkedListNode(data, this.end);
   //     this.end = newNode;
