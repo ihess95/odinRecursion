@@ -13,6 +13,11 @@ class LinkedList {
 
   getByIndex(index) {
     if (index < 0 || index >= this.length) return null;
+
+    let current = this.head;
+    for (let i = 0; i < index; i++) {
+      current = current.next;
+    }
   }
 
   //   append(data) {
