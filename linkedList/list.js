@@ -41,7 +41,7 @@ function LinkedList() {
         currentNode = currentNode.next;
       }
 
-      previouseNode.next = currentNode.next;
+      previousNode.next = currentNode.next;
     }
     length--;
   };
@@ -70,5 +70,12 @@ function LinkedList() {
       currentNode = currentNode.next;
     }
     return currentNode.element;
+  };
+
+  this.addAt = function (index, element) {
+    let node = new Node(element);
+
+    let currentNode = head;
+    let previousNode;
   };
 }
