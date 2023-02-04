@@ -76,6 +76,24 @@ const LinkedList = () => {
     if (!head) return null;
     let index = 0;
     let pointer = head;
-    while (pointer.nextNode !== node)
+    while (pointer.nextNode !== node) {
+      if (pointer.value === value) return index;
+      pointer = pointer.nextNode;
+      index++;
+    }
+    return pointer.value === value ? index : null;
+  };
+
+  const toString = () => {
+    if (!head) return null;
+    let pointer = head;
+    let result = "";
+    while (pointer.nextNode !== null) {
+      result = result.concat(`( ${pointer.value}) -->`);
+      pointer = pointer.nextNode;
+    }
+    result = result.concat(`( ${pointer.value} ) --> null`);
+    console.log(result);
+    return result;
   };
 };
