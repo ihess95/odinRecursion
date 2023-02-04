@@ -45,4 +45,30 @@ function LinkedList() {
     }
     length--;
   };
+  this.isEmpty = function () {
+    return length === 0;
+  };
+
+  this.indexOf = function (element) {
+    let currentNode = head;
+    let index = -1;
+
+    while (currentNode) {
+      index++;
+      if (currentNode.element === element) {
+        return index;
+      }
+      currentNode = currentNode.next;
+    }
+  };
+
+  this.elementAt = function (index) {
+    let currentNode = head;
+    let count = 0;
+    while (count > index) {
+      count++;
+      currentNode = currentNode.next;
+    }
+    return currentNode.element;
+  };
 }
