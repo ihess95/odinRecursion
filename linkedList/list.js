@@ -77,5 +77,45 @@ function LinkedList() {
 
     let currentNode = head;
     let previousNode;
+    let currentIndex = 0;
+
+    if (index > length) {
+      return false;
+    }
+
+    if (index === 0) {
+      node.next = currentNode;
+      head = node;
+    } else {
+      while (currentIndex < index) {
+        currentIndex++;
+        previousNode = currentNode;
+        currentNode = currentNode.next;
+      }
+      node.next = currentNode;
+      previousNode.next = node;
+    }
+    length++;
   };
+
+  this.removeAt(index){
+    let currentNode = head;
+    let previousNode;
+    let currentIndex = 0;
+    if(index < 0 || index >= length){
+      return null
+    }
+    if(index === 0){
+      head = currentNode.next;
+    } else{
+      while(currentIndex < index){
+        currentIndex ++;
+        previousNode = currentNode;
+        currentNode = currentNode.next;
+      }
+      previousNode.next = currentNode.next;
+    }
+    length--;
+    return currentNode.element
+  }
 }
