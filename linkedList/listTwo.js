@@ -96,4 +96,28 @@ const LinkedList = () => {
     console.log(result);
     return result;
   };
+
+  const insertAt = (value, index) => {
+    if (!head) return null;
+    const newNode = Node(value);
+    length++;
+    let pointer = head;
+    for (let i = 0; i < index; i++) {
+      pointer = pointer.nextNode;
+    }
+    const nextNode = pointer.nextNode;
+    pointer.nextNode = newNode;
+    newNode.nextNode = nextNode;
+  };
+
+  const removeAt = (index) => {
+    if (!head) return null;
+    if (index > length || index < 0) return;
+    if (index === 0) head = head.nextNode;
+    else {
+      const prePointer = at(index - 1);
+      prePointer.nextNode = prePointer.nextNode.nextNode;
+    }
+    length--;
+  };
 };
