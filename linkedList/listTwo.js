@@ -62,7 +62,7 @@ const LinkedList = () => {
     length--;
   };
 
-  const cointains = (value) => {
+  const contains = (value) => {
     if (!head) return null;
     let pointer = head;
     while (pointer.nextNode !== null) {
@@ -119,5 +119,20 @@ const LinkedList = () => {
       prePointer.nextNode = prePointer.nextNode.nextNode;
     }
     length--;
+  };
+
+  return {
+    append,
+    prepend,
+    size,
+    getHead,
+    tail,
+    at,
+    pop,
+    contains,
+    find,
+    toString,
+    insertAt,
+    removeAt,
   };
 };
