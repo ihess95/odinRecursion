@@ -30,3 +30,27 @@
 // root = sortedArrayToBST(arr, 0, n - 1);
 // document.write("Preorder traversal of constructed BST<br>");
 // preOrder(root);
+
+const prettyPrint = (node, isLeft = true) => {
+  if (node.right !== null) {
+    prettyPrint(node.right, `${prefix}${isLeft ? "| " : "   "}`, false);
+  }
+  console.log(`${prefix}${isLeft ? "└── " : "┌── "}${node.data}`);
+  if (node.left !== null) {
+    prettyPrint(node.left, `${prefix}${isLeft ? "    " : "│   "}`, true);
+  }
+};
+
+// prefix = "";
+
+class Node {
+  constructor(d) {
+    this.data = d;
+    this.left = null;
+    this.right = null;
+  }
+}
+
+class Tree {}
+
+function buildTree(arr) {}
